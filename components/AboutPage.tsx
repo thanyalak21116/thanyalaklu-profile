@@ -1,24 +1,21 @@
 import React, { FunctionComponent } from "react";
-import { Box, Button, ButtonProps, Container, Grid, ImageList, ImageListItem, styled, Typography } from "@mui/material";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Box, Button, ButtonProps, Container, styled, Typography } from "@mui/material";
+import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const AboutPage: FunctionComponent = () => {
     return (
-        <Container 
-            sx={{ 
-                height: '100vh', 
-                padding: '10px', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center'
-            }}
-        >
-            <Box>
+        <Container sx={{ height: '100vh' }}>
+            <Box 
+                height='90vh'
+                sx={{ padding: '10px' }}
+            >
                 <Typography 
                     variant="h4" 
                     align="center"
                     sx={{ 
-                        py: '4px' 
+                        py: '4px',
+                        mt: '22%'
                     }}
                 >
                     About Me
@@ -31,22 +28,45 @@ const AboutPage: FunctionComponent = () => {
                         py: '4px'
                     }}
                 >
-                    My introduction
+                    Summary Statement
                 </Typography>
+                <Box sx={{ textAlign: '-webkit-center' }}>
+                    <Typography 
+                        variant='body1'
+                        sx={{ 
+                            paddingBottom: '30px', 
+                            lineHeight: '1.8',
+                            width: '55vw'
+                        }}
+                        align='center'
+                        mt={3}
+                    >
+                        I am a Software Engineer (Front-End Developer) who is providinga web application and application solutions for driving a business to be success.
+                        I have skills at designing and developing web-based applications.
+                        I am eager to learn new things, team worker, interpersonal skills, and work hard in order to get the best result for myself and the company.
+                    </Typography>
+                </Box>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <MouseOutlinedIcon fontSize='medium' sx={{ color: '#7397af' }}/>
+                <Typography 
+                    variant='body1' 
+                    sx={{ 
+                        mx: '2px', 
+                        color: '#3a3a3a', 
+                        '&:hover': {
+                            cursor: 'pointer', 
+                            color: '#7397af',
+                        }
+                    }}
+                >
+                    Scroll Down
+                </Typography>
+                <ArrowDownwardIcon fontSize='small' sx={{ color: '#7397af' }}/>
             </Box>
         </Container>
     )
 }
-
-const ContactButton = styled(Button)<ButtonProps>(({ theme }) => ({
-    color: 'white',
-    backgroundColor: '#581FF3',
-    padding: '6px 10px',
-    '&:hover': {
-      backgroundColor: '#581FF3',
-      opacity: 0.5
-    },
-}));
 
 
 export default AboutPage

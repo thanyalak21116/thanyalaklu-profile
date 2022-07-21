@@ -2,8 +2,10 @@ import { NextPage } from "next";
 import { Container } from "@mui/material";
 import { 
     AboutPage, 
+    ExpirencesPage, 
     Header, 
-    HomePage 
+    HomePage, 
+    SkillsPage,
 } from "../components";
 
 const Profile: NextPage = () => {
@@ -12,6 +14,8 @@ const Profile: NextPage = () => {
           <Header />
           <HomePage />
           <AboutPage />
+          <SkillsPage />
+          <ExpirencesPage />
         </Container>
       )
 }

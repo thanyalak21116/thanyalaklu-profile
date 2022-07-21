@@ -4,14 +4,14 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-const pages = ['Home', 'About', 'Skills', 'Portfolio', 'Contact']
+const pages = ['Contact', 'About', 'Skills', 'Expirences']
 
 const Header: FunctionComponent = () => {
     return (
         <AppBar 
             position="sticky"
             style={{
-                backgroundColor: 'white',
+                backgroundColor: '#f6f6f7',
                 border: 0,
                 boxShadow: '0px 1px 0px 0px #f0f0f0',
                 padding: '0 30px',
@@ -23,7 +23,7 @@ const Header: FunctionComponent = () => {
             >
                 <Box>
                     <Typography
-                        variant="button"
+                        variant="body1"
                         gutterBottom
                         noWrap
                         sx={{ 
@@ -32,7 +32,7 @@ const Header: FunctionComponent = () => {
                                 xs: 'flex', 
                                 md: 'flex' 
                             }, 
-                            color: '#581FF3' 
+                            color: '#7397af' 
                         }}
                     >
                         Thanyalak Luamsai
@@ -58,7 +58,7 @@ const Header: FunctionComponent = () => {
                                     display: 'block', 
                                     "&:hover": {
                                         cursor: 'pointer', 
-                                        color: '#581FF3',
+                                        color: '#7397af',
                                     } 
                                 }}
                             >
