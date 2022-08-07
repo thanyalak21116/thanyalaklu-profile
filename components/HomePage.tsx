@@ -115,7 +115,7 @@ const HomePage: FunctionComponent = () => {
                             </Box>
                             <Box display='flex' alignItems='center' justifyContent='center' mb='3px'>
                                 <Typography variant='button' color='#000000'>Education :</Typography>
-                                <Typography ml={1} variant='body2'>King Mongkut's Institute of Technology Ladkrabang</Typography>
+                                <Typography ml={1} variant='body2'>King Mongkut&apos;s Institute of Technology Ladkrabang</Typography>
                             </Box>
                             <Typography ml={1} variant='body2'>Manufacturing System Engineering, Bachelor of Engineering (GPA 3.19)</Typography>
                         </Box>

@@ -68,7 +68,8 @@ const Header = (props: IHeader) => {
                     }}
                 >
                     {pages.map((page) => (
-                        <Box 
+                        <Box
+                            key={page.title}
                             sx={{ marginLeft: '32px' }}
                             onClick={() => router.push(page.navigate)}
                         >

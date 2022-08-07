@@ -68,7 +68,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 mb={1}
                                 color='#777777'
                             >
-                                ● Web application: Develops web application by Next.js frameworks and using react-query to access data from API. I'm a part of the project in terms of developing website by the following features below:
+                                ● Web application: Develops web application by Next.js frameworks and using react-query to access data from API. I&apos;m a part of the project in terms of developing website by the following features below:
                             </Typography>
                             <TypographyTheme style={{ paddingLeft: '50px', marginBottom: '15px' }}>
                                 ○ Register and Login/Logout feature.
@@ -208,7 +208,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 }}
                             />
                             <TypographyTheme style={{ paddingLeft: '50px', marginBottom: '15px' }}>
-                                ○ Restaurants' review page such as write review, give rating to restaurants, view reviews, search restaurants, etc. 
+                                ○ Restaurants&apos; review page such as write review, give rating to restaurants, view reviews, search restaurants, etc. 
                             </TypographyTheme>
                             <img
                                 src='/images/ReviewContentFeature_2.png'
@@ -248,10 +248,10 @@ const ExpirencesPage: FunctionComponent = () => {
                                 mb={1}
                                 color='#777777'
                             >
-                                ● Application: Develops application by React Native frameworks. I'm a part of the project in terms of developing application by the following features below:
+                                ● Application: Develops application by React Native frameworks. I&apos;m a part of the project in terms of developing application by the following features below:
                             </Typography>
                             <TypographyTheme style={{ paddingLeft: '50px', marginBottom: '15px' }}>
-                                ○ Restaurants' review page such as write review, give rating to restaurants, view reviews, search restaurants, etc. 
+                                ○ Restaurants&apos; review page such as write review, give rating to restaurants, view reviews, search restaurants, etc. 
                             </TypographyTheme>
                             <Box display='flex'>
                                 <img
