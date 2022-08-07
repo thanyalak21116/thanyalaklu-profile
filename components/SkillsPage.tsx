@@ -1,22 +1,21 @@
 import React, { FunctionComponent } from 'react';
 import { Box, Button, ButtonProps, Container, Grid, styled, Typography } from '@mui/material';
-import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { useRouter } from 'next/router';
 
 const SkillPage: FunctionComponent = () => {
+    const router = useRouter()
     return (
-        <Container sx={{ height: '100vh' }}>
+        <Container>
             <Box 
-                sx={{ 
-                    padding: '10px', 
-                    height: '90vh',
-                }}
+                sx={{ padding: '10px' }}
             >
                 <Box 
                     sx={{
-                        mt: '10%',
+                        mt: '2vh',
                         paddingX: '30px',
-                        paddingY: '25px',
+                        paddingY: '50px',
                         height: '80vh',
                     }}
                 >
@@ -301,8 +300,8 @@ const SkillPage: FunctionComponent = () => {
                                             </Box>
                                         </Grid>
                                     </Grid>
-                                    <Grid container columns={1}>
-                                        <Grid item xs={1}>
+                                    <Grid container columns={4}>
+                                        <Grid item xs={2}>
                                             <Box sx={{ textAlign: 'center', ml: 1 }}>
                                                 <img
                                                     src='/images/Jenkins.png'
@@ -311,10 +310,14 @@ const SkillPage: FunctionComponent = () => {
                                                     loading='lazy'
                                                     style={{
                                                         height: '40px',
-                                                        marginTop: '10px',
-                                                        marginRight: '30px'
+                                                        marginTop: '10px'
                                                     }}
                                                 />
+                                                <Typography variant='body2' mt='4px'>Jenkins</Typography>
+                                            </Box>
+                                        </Grid>
+                                        <Grid item xs={2}>
+                                            <Box sx={{ textAlign: 'center', mr: 1 }}>
                                                 <img
                                                     src='/images/Azure.png'
                                                     srcSet={`/images/Azure.png 2x`}
@@ -325,7 +328,7 @@ const SkillPage: FunctionComponent = () => {
                                                         marginTop: '10px'
                                                     }}
                                                 />
-                                                <Typography variant='body2' mt='4px'>CI/CD (Jenkins, <br/>Azure DevOps)</Typography>
+                                                <Typography variant='body2' mt='4px'>Azure DevOps</Typography>
                                             </Box>
                                         </Grid>
                                     </Grid>
@@ -395,21 +398,42 @@ const SkillPage: FunctionComponent = () => {
                 </Box>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <MouseOutlinedIcon fontSize='medium' sx={{ color: '#7397af' }}/>
-                <Typography 
-                    variant='body1' 
-                    sx={{ 
-                        mx: '2px', 
-                        color: '#3a3a3a', 
-                        '&:hover': {
-                            cursor: 'pointer', 
-                            color: '#7397af',
-                        }
-                    }}
-                >
-                    Scroll Down
-                </Typography>
-                <ArrowDownwardIcon fontSize='small' sx={{ color: '#7397af' }}/>
+                <Box display='flex' marginRight='20vw' onClick={() => router.push('/Profile')}>
+                    <Box display='flex'>
+                        <NavigateBeforeIcon fontSize='medium' sx={{ color: '#7397af' }}/>
+                        <Typography
+                            variant='body1' 
+                            sx={{
+                                mx: '2px', 
+                                color: '#3a3a3a', 
+                                '&:hover': {
+                                    cursor: 'pointer', 
+                                    color: '#7397af',
+                                }
+                            }}
+                        >
+                            About Page
+                        </Typography>
+                    </Box>
+                </Box>
+                <Box display='flex' marginLeft='20vw' onClick={() => router.push('/Expirences')}>
+                    <Box display='flex'>
+                        <Typography 
+                            variant='body1' 
+                            sx={{ 
+                                mx: '2px', 
+                                color: '#3a3a3a', 
+                                '&:hover': {
+                                    cursor: 'pointer', 
+                                    color: '#7397af',
+                                }
+                            }}
+                        >
+                            Expirences Page
+                        </Typography>
+                        <NavigateNextIcon fontSize='medium' sx={{ color: '#7397af' }}/>
+                    </Box>
+                </Box>
             </Box>
         </Container>
     )

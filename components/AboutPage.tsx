@@ -1,11 +1,17 @@
 import React, { FunctionComponent } from "react";
-import { Box, Button, ButtonProps, Container, styled, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { useRouter } from "next/router";
 
 const AboutPage: FunctionComponent = () => {
+    const router = useRouter()
+    const scrollUp = () => {
+        window.scrollTo(0, parseFloat('-1000vh'));
+    }
     return (
-        <Container sx={{ height: '100vh' }}>
+        <Container sx={{ height: '97vh' }}>
             <Box 
                 height='90vh'
                 sx={{ padding: '10px' }}
@@ -48,25 +54,46 @@ const AboutPage: FunctionComponent = () => {
                 </Box>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <MouseOutlinedIcon fontSize='medium' sx={{ color: '#7397af' }}/>
-                <Typography 
-                    variant='body1' 
-                    sx={{ 
-                        mx: '2px', 
-                        color: '#3a3a3a', 
-                        '&:hover': {
-                            cursor: 'pointer', 
-                            color: '#7397af',
-                        }
-                    }}
-                >
-                    Scroll Down
-                </Typography>
-                <ArrowDownwardIcon fontSize='small' sx={{ color: '#7397af' }}/>
+                <Box display='flex' marginRight='20vw' onClick={() => scrollUp()}>
+                    <MouseOutlinedIcon fontSize='medium' sx={{ color: '#7397af' }}/>
+                    <Box display='flex'>
+                        <Typography
+                            variant='body1' 
+                            sx={{
+                                mx: '2px', 
+                                color: '#3a3a3a', 
+                                '&:hover': {
+                                    cursor: 'pointer', 
+                                    color: '#7397af',
+                                }
+                            }}
+                        >
+                            Scroll Up
+                        </Typography>
+                        <ArrowUpwardIcon fontSize='small' sx={{ color: '#7397af' }}/>
+                    </Box>
+                </Box>
+                <Box display='flex' marginLeft='20vw' onClick={() => router.push('/Skills')}>
+                    <Box display='flex'>
+                        <Typography 
+                            variant='body1' 
+                            sx={{ 
+                                mx: '2px', 
+                                color: '#3a3a3a', 
+                                '&:hover': {
+                                    cursor: 'pointer', 
+                                    color: '#7397af',
+                                }
+                            }}
+                        >
+                            Skills Page
+                        </Typography>
+                        <NavigateNextIcon fontSize='medium' sx={{ color: '#7397af' }}/>
+                    </Box>
+                </Box>
             </Box>
         </Container>
     )
 }
-
 
 export default AboutPage

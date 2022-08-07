@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { createTheme, ThemeProvider } from '@mui/material';
+import { useState } from 'react';
 
 const theme = createTheme({
   typography: {
@@ -12,11 +13,17 @@ const theme = createTheme({
     ].join(','),
   },});
 
-
+export enum ActiveTab {
+  ABOUT = 'About',
+  SKILLS = 'Skills',
+  EXPIRENCES = 'Expirences'
+}
+  
 function MyApp({ Component, pageProps }: AppProps) {
+  const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.ABOUT)
   return (
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps} activeTab={activeTab} setActiveTab={setActiveTab} />
       </ThemeProvider>
     )
 }

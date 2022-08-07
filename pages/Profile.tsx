@@ -1,21 +1,27 @@
-import { NextPage } from "next";
 import { Container } from "@mui/material";
 import { 
     AboutPage, 
-    ExpirencesPage, 
     Header, 
     HomePage, 
-    SkillsPage,
 } from "../components";
+import { Dispatch, SetStateAction, useEffect } from "react";
+import { ActiveTab } from "./_app";
 
-const Profile: NextPage = () => {
+export interface IProfile {
+  activeTab: ActiveTab;
+  setActiveTab: Dispatch<SetStateAction<ActiveTab>>
+}
+
+const Profile = (props: IProfile) => {
+  const { activeTab, setActiveTab } = props
+  useEffect(() => {
+    setActiveTab(ActiveTab.ABOUT)
+  }, [])
     return (
         <Container fixed>
-          <Header />
+          <Header activeTab={activeTab} />
           <HomePage />
           <AboutPage />
-          <SkillsPage />
-          <ExpirencesPage />
         </Container>
       )
 }

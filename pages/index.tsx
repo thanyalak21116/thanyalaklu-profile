@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Profile from './Profile'
+import { ActiveTab } from './_app'
 
 const Home: NextPage = () => {
+  const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.ABOUT)
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +18,7 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
       </Head>
       <main>
-        <Profile />
+        <Profile activeTab={activeTab} setActiveTab={setActiveTab} />
       </main>
     </div>
   )

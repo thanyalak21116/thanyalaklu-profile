@@ -1,14 +1,18 @@
 import React, { FunctionComponent } from 'react';
-import { Box, Button, ButtonProps, Container, Grid, styled, Typography } from '@mui/material';
+import { Box, Button, ButtonProps, Container, styled, Typography } from '@mui/material';
 import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Link from '@mui/material/Link';
 
 const HomePage: FunctionComponent = () => {
+    const scrollDown = () => {
+        window.scrollTo(0, parseFloat('1000vh'));
+    }
     return (
-        <Container sx={{ height: '100vh'}}>
+        <Container>
             <Box 
                 sx={{ 
                     padding: '10px', 
@@ -60,9 +64,37 @@ const HomePage: FunctionComponent = () => {
                             Software Engineer (Frontend Developer)
                         </Typography>
                         <Box>
-                            <LinkedInIcon fontSize='large' sx={{ color: 'white', marginRight: '6px' }}/>
-                            <PhoneIcon fontSize='large' sx={{ color: 'white', marginRight: '6px' }}/>
-                            <EmailIcon fontSize='large' sx={{ color: 'white', marginRight: '6px' }}/>
+                            <Link href='https://th.linkedin.com/in/thanyalak-luamsai-1b17561b3'>
+                                <LinkedInIcon 
+                                    fontSize='large' 
+                                    sx={{ 
+                                        color: 'white', 
+                                        marginRight: '6px', 
+                                        '&:hover': { cursor: 'pointer' } 
+                                    }}
+                                    onClick={() => {}}
+                                />
+                            </Link>
+                            <Link href='tel:+(66)949419900'>
+                                <PhoneIcon
+                                    fontSize='large'
+                                    sx={{ 
+                                        color: 'white', 
+                                        marginRight: '6px', 
+                                        '&:hover': { cursor: 'pointer' } 
+                                    }}
+                                />
+                            </Link>
+                            <Link href='mailto:thanyalak.lua@gmail.com'>
+                                <EmailIcon 
+                                    fontSize='large' 
+                                    sx={{ 
+                                        color: 'white', 
+                                        marginRight: '6px', 
+                                        '&:hover': { cursor: 'pointer' } 
+                                    }}
+                                />
+                            </Link>
                         </Box>
                         <Box mt={2}>
                             <Box display='flex' alignItems='center' justifyContent='center' mb='3px'>
@@ -95,30 +127,32 @@ const HomePage: FunctionComponent = () => {
                             textAlign: 'center',
                         }}
                     >
-                        <Button 
-                            variant='text' 
-                            sx={{
-                                width: '150px',
-                                marginTop: '30px',
-                                marginBottom: 'auto',
-                                color: '#c0e1f7',
-                                borderTopLeftRadius: '50px',
-                                borderTopRightRadius: '50px',
-                                borderBottomLeftRadius: '50px',
-                                borderBottomRightRadius: '50px',
-                                backgroundColor: 'text.primary',
-                                '&:hover': {
-                                    backgroundColor: '#555555',
-                                    color: '#c7deee',
-                                } 
-                            }}
-                        >
-                            Download CV
-                        </Button>
+                        <Link underline='none' href='/pdf/Thanyalak_Luamsai_Frontend_Developer.pdf'>
+                            <Button 
+                                variant='text' 
+                                sx={{
+                                    width: '150px',
+                                    marginTop: '30px',
+                                    marginBottom: 'auto',
+                                    color: '#c0e1f7',
+                                    borderTopLeftRadius: '50px',
+                                    borderTopRightRadius: '50px',
+                                    borderBottomLeftRadius: '50px',
+                                    borderBottomRightRadius: '50px',
+                                    backgroundColor: 'text.primary',
+                                    '&:hover': {
+                                        backgroundColor: '#555555',
+                                        color: '#c7deee',
+                                    } 
+                                }}
+                            >
+                                Download CV
+                            </Button>
+                        </Link>
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => scrollDown()}>
                 <MouseOutlinedIcon fontSize='medium' sx={{ color: '#7397af' }}/>
                 <Typography 
                     variant='body1' 
@@ -148,6 +182,5 @@ const ContactButton = styled(Button)<ButtonProps>(({ theme }) => ({
         opacity: 0.5
     },
 }));
-
 
 export default HomePage
