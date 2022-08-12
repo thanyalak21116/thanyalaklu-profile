@@ -24,7 +24,7 @@ const HomePage: FunctionComponent = () => {
                     sx={{
                         width: '100vw',
                         height: '80vh',
-                        boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+                        boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.19)',
                     }}
                 >
                     <Box 
@@ -40,7 +40,7 @@ const HomePage: FunctionComponent = () => {
                             alt={'Thanyalak'}
                             loading='lazy'
                             style={{
-                                width: '200px',
+                                width: '170px',
                                 borderRadius: '50%',
                                 marginTop: '20px'
                             }}

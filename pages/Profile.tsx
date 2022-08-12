@@ -1,4 +1,3 @@
-import { Container } from "@mui/material";
 import { 
     AboutPage, 
     Header, 
@@ -18,11 +17,11 @@ const Profile = (props: IProfile) => {
     setActiveTab(ActiveTab.ABOUT)
   }, [])
     return (
-        <Container fixed>
+        <>
           <Header activeTab={activeTab} />
           <HomePage />
           <AboutPage />
-        </Container>
+        </>
       )
 }
 

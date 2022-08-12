@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useRouter } from 'next/router';
 import { ActiveTab } from '../pages/_app';
+import { colors, Container } from '@mui/material';
 
 interface IHeader {
     activeTab: ActiveTab
@@ -32,12 +33,13 @@ const Header = (props: IHeader) => {
         <AppBar 
             position="sticky"
             style={{
-                backgroundColor: '#f6f6f7',
+                backgroundColor: '#e6ddde',
                 border: 0,
-                boxShadow: '0px 1px 0px 0px #f0f0f0',
+                boxShadow: '0px 1px 0px 0px #e6ddde',
                 padding: '0 30px',
-            }} 
+            }}
         >
+        <Container>
             <Toolbar 
                 disableGutters 
                 sx={{ justifyContent: 'space-between' }}
@@ -53,7 +55,7 @@ const Header = (props: IHeader) => {
                                 xs: 'flex', 
                                 md: 'flex' 
                             }, 
-                            color: '#7397af' 
+                            color: '#a89899'
                         }}
                     >
                         Thanyalak Luamsai
@@ -84,7 +86,7 @@ const Header = (props: IHeader) => {
                                         display: 'block', 
                                         "&:hover": {
                                             cursor: 'pointer', 
-                                            color: '#7397af',
+                                            color: '#a89899',
                                         } 
                                     }}
                                 >
@@ -96,7 +98,7 @@ const Header = (props: IHeader) => {
                                     noWrap
                                     sx={{ 
                                         my: 2, 
-                                        color: '#7397af', 
+                                        color: '#a89899',
                                         display: 'block', 
                                         "&:hover": {
                                             cursor: 'pointer',
@@ -110,6 +112,7 @@ const Header = (props: IHeader) => {
                     ))}
                 </Box>
             </Toolbar>
+        </Container>
         </AppBar>
     );
 };

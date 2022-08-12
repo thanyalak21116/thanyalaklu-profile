@@ -1,9 +1,17 @@
 import React, { FunctionComponent } from "react";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, colors, Container, Typography } from "@mui/material";
 import MouseOutlinedIcon from '@mui/icons-material/MouseOutlined';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { useRouter } from "next/router";
+import { styled } from '@mui/material/styles';
+
+const TypographyTheme = styled('div')(({ theme }) => ({
+    ...theme.typography.h4,
+    background: `-webkit-linear-gradient(top, #f0f0f0 50%, ${colors.lightBlue[100]} 50%)`,
+    padding: theme.spacing(1),
+    width: '20%'
+}));
 
 const AboutPage: FunctionComponent = () => {
     const router = useRouter()
@@ -16,16 +24,16 @@ const AboutPage: FunctionComponent = () => {
                 height='90vh'
                 sx={{ padding: '10px' }}
             >
-                <Typography 
-                    variant="h4" 
-                    align="center"
-                    sx={{ 
-                        py: '4px',
-                        mt: '22%'
-                    }}
-                >
-                    About Me
-                </Typography>
+                <Box sx={{ textAlign: '-webkit-center' }}>
+                    <TypographyTheme 
+                        sx={{ 
+                            py: '4px',
+                            mt: '22%',
+                        }}
+                    >
+                        About Me
+                    </TypographyTheme>
+                </Box>
                 <Typography 
                     variant="subtitle1" 
                     align="center"

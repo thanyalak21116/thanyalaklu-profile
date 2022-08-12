@@ -1,8 +1,15 @@
 import React, { FunctionComponent } from 'react';
-import { Box, Button, ButtonProps, Container, Grid, styled, Typography } from '@mui/material';
+import { Box, Button, ButtonProps, colors, Container, Grid, styled, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { useRouter } from 'next/router';
+
+const TypographyTheme = styled('div')(({ theme }) => ({
+    ...theme.typography.h4,
+    background: `-webkit-linear-gradient(top, #f0f0f0 50%, ${colors.lightBlue[100]} 50%)`,
+    padding: theme.spacing(1),
+    width: '20%'
+}));
 
 const SkillPage: FunctionComponent = () => {
     const router = useRouter()
@@ -19,14 +26,16 @@ const SkillPage: FunctionComponent = () => {
                         height: '80vh',
                     }}
                 >
-                    <Typography 
-                        variant='h4'
-                        align='center'
-                        mb='30px'
-                        sx={{ py: '4px' }}
-                    >
-                        Skills
-                    </Typography>
+                    <Box sx={{ textAlign: '-webkit-center' }}>
+                        <TypographyTheme
+                            sx={{ 
+                                py: '4px', 
+                                mb: '30px' 
+                            }}
+                        >
+                            Skills
+                        </TypographyTheme>
+                    </Box>
                     <Grid container columns={12}>
                         <Grid item xs={3}>
                             <Box

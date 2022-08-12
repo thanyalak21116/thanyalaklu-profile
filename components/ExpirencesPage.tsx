@@ -4,6 +4,13 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { styled } from '@mui/material/styles';
 import { useRouter } from "next/router";
 
+const TypographyThemeTitle = styled('div')(({ theme }) => ({
+    ...theme.typography.h4,
+    background: `-webkit-linear-gradient(top, #f0f0f0 50%, ${colors.lightBlue[100]} 50%)`,
+    padding: theme.spacing(1),
+    width: '37%'
+}));
+
 const TypographyTheme = styled('div')(({ theme }) => ({
     ...theme.typography.body2,
     backgroundColor: colors.lightBlue[100],
@@ -15,16 +22,16 @@ const ExpirencesPage: FunctionComponent = () => {
     return (
         <Container>
             <Box sx={{ padding: '10px' }}>
-                <Typography 
-                    variant="h4" 
-                    align="center"
-                    sx={{ 
-                        py: '4px',
-                        mt: '2vh'
-                    }}
-                >
-                    Expirences & Projects
-                </Typography>
+                <Box sx={{ textAlign: '-webkit-center' }}>
+                    <TypographyThemeTitle
+                        sx={{ 
+                            py: '4px',
+                            mt: '2vh'
+                        }}
+                    >
+                        Expirences & Projects
+                    </TypographyThemeTitle>
+                </Box>
                 <Typography 
                     variant="subtitle1" 
                     align="center"
@@ -36,7 +43,7 @@ const ExpirencesPage: FunctionComponent = () => {
                 >
                     Work Expirences
                 </Typography>
-                <Grid container columns={4} mb={5}>
+                <Grid container columns={4} mb={5} style={{ backgroundColor: 'white', padding: '36px' }}>
                     <Grid item xs={1}>
                         <Box sx={{ borderRight: '3px solid #c0e1f7' }}>
                             <Typography 
@@ -333,7 +340,7 @@ const ExpirencesPage: FunctionComponent = () => {
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid container columns={4}>
+                <Grid container columns={4} style={{ backgroundColor: 'white', padding: '36px' }}>
                     <Grid item xs={1}>
                         <Box sx={{ borderRight: '3px solid #c0e1f7' }}>
                             <Typography 

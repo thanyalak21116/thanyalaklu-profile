@@ -1,4 +1,3 @@
-import { Container } from "@mui/material";
 import { 
     ExpirencesPage, 
     Header, 
@@ -17,10 +16,10 @@ const Expirences = (props: IExpirences) => {
     setActiveTab(ActiveTab.EXPIRENCES)
   }, [])
     return (
-        <Container fixed>
+        <>
           <Header activeTab={activeTab} />
           <ExpirencesPage />
-        </Container>
+        </>
       )
 }
 
