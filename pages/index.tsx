@@ -8,7 +8,7 @@ import { ActiveTab } from './_app'
 const Home: NextPage = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.ABOUT)
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Thanyalak Luamsai</title>
         <meta name="description" content="My name is Thanyalak Luamsai and I am a front-end developer" />
