@@ -54,9 +54,10 @@ const ExpirencesPage: FunctionComponent = () => {
                     <Grid item xs={1}>
                         <Box sx={{ borderRight: '3px solid #c0e1f7' }}>
                             <Typography 
-                                align='right' 
+                                align='center' 
                                 mr={4} 
                                 variant='subtitle1'
+                                sx={{ background: `-webkit-linear-gradient(top, #ffffff 50%, ${colors.yellow[300]} 50%)` }}
                             >
                                 July 2021 - Present
                             </Typography>
@@ -93,7 +94,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'LoginFeature'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -104,7 +105,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'RegisterFeature'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -118,7 +119,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'PersonalInformationFeature_1'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -129,7 +130,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'PersonalInformationFeature_3'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -140,7 +141,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'PersonalInformationFeature_4'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -154,7 +155,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'AddressFeature_1'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -165,7 +166,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'AddressFeature_2'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -177,9 +178,9 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'AddressFeatureMobile_1'}
                                     loading='lazy'
                                     style={{
-                                        width: '14.35vw',
+                                        width: '30%',
                                         marginBottom: '30px',
-                                        marginRight: '1vw',
+                                        marginRight: '5%',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
                                 />
@@ -189,9 +190,9 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'AddressFeatureMobile_2'}
                                     loading='lazy'
                                     style={{
-                                        width: '14.35vw',
+                                        width: '30%',
                                         marginBottom: '30px',
-                                        marginRight: '1vw',
+                                        marginRight: '5%',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
                                 />
@@ -201,7 +202,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'AddressFeatureMobile_3'}
                                     loading='lazy'
                                     style={{
-                                        width: '14.35vw',
+                                        width: '30%',
                                         marginBottom: '30px',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
@@ -216,7 +217,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'PaymentFeature'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -230,7 +231,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'ReviewContentFeature_2'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -241,7 +242,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'ReviewContentFeature_2'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -252,7 +253,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'ReviewContentFeature_2'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -274,9 +275,9 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'ReviewAppFeature_2'}
                                     loading='lazy'
                                     style={{
-                                        width: '17.5vw',
+                                        width: '30%',
                                         marginBottom: '30px',
-                                        marginRight: '1.25vw',
+                                        marginRight: '5%',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
                                 />
@@ -286,9 +287,9 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'ReviewAppFeature_3'}
                                     loading='lazy'
                                     style={{
-                                        width: '17.5vw',
+                                        width: '30%',
                                         marginBottom: '30px',
-                                        marginRight: '1.25vw',
+                                        marginRight: '5%',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
                                 />
@@ -298,7 +299,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'ReviewAppFeature_6'}
                                     loading='lazy'
                                     style={{
-                                        width: '17.5vw',
+                                        width: '30%',
                                         marginBottom: '30px',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
@@ -314,9 +315,9 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'HistoryAppFeature_1'}
                                     loading='lazy'
                                     style={{
-                                        width: '17.5vw',
+                                        width: '30%',
                                         marginBottom: '30px',
-                                        marginRight: '1.25vw',
+                                        marginRight: '5%',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
                                 />
@@ -326,9 +327,9 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'HistoryAppFeature_3'}
                                     loading='lazy'
                                     style={{
-                                        width: '17.5vw',
+                                        width: '30%',
                                         marginBottom: '30px',
-                                        marginRight: '1.25vw',
+                                        marginRight: '5%',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
                                 />
@@ -338,7 +339,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                     alt={'ReviewAppFeature_6'}
                                     loading='lazy'
                                     style={{
-                                        width: '17.5vw',
+                                        width: '30%',
                                         marginBottom: '30px',
                                         boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                     }}
@@ -351,9 +352,10 @@ const ExpirencesPage: FunctionComponent = () => {
                     <Grid item xs={1}>
                         <Box sx={{ borderRight: '3px solid #c0e1f7' }}>
                             <Typography 
-                                align='right' 
+                                align='center' 
                                 mr={4} 
                                 variant='subtitle1'
+                                sx={{ background: `-webkit-linear-gradient(top, #ffffff 50%, ${colors.yellow[300]} 50%)` }}
                             >
                                 Jun 2019 - July 2021
                             </Typography>
@@ -382,7 +384,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'D3D_1'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
@@ -393,7 +395,7 @@ const ExpirencesPage: FunctionComponent = () => {
                                 alt={'D3D_2'}
                                 loading='lazy'
                                 style={{
-                                    width: '45vw',
+                                    width: '100%',
                                     marginBottom: '30px',
                                     boxShadow: '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
                                 }}
